@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/index.css') }}">
+    <script src="{{ url_for('static', path='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', path='js/index.js') }}"></script>
+</head>
+<body>
+    <header> 
+        <div class="item item1">
+            <div class="home">
+                <a href="/"></a>
+            </div>
+            <div class="bold">Анализ по фотоплетизмограмме</div>
+        </div>       
+        <div class="item item2">
+            <div class="button">
+                <a href="#">Анализ</a>
+            </div>
+            <div class="button">
+                <a href="#">Авторизация</a>
+            </div>
+        </div>        
+    </header>   
+    <main>
+        <div class="wrap">
+            <form class="input-block" id="main_file_form">
+                <input type="file" title="Загрузить данные" class="predict_input" id="predict_input" name="file" enctype="multipart/form-data">
+                <div class="predict_button">Загрузить данные</div>
+            </form>
+            
+            <textarea type="text" class="predictions" disabled id="predictions" value="Predictions" ></textarea>
+        </div>
+        
+    </main>
+</body>
+</html>

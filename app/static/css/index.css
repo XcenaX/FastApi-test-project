@@ -1,0 +1,225 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+
+	/* Heading height variable*/
+	--heading-height: 6vw;
+}
+
+body {
+	font-family: "Roboto", Arial, sans-serif;
+	min-height: 100vh;
+	background-color: #23232a;
+	padding: 0;
+    margin: 0;
+}
+
+header {
+	position: absolute;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--heading-height);
+	padding-left: 5%;
+	padding-right: 5%;
+	max-width: 100%;
+}
+
+header .item{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .item.item1{
+	width: 25%;
+}
+
+header .item.item2{
+	width: 20%;
+}
+
+header .bold{
+	color: white;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+header .item .button{	
+	padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    text-align: center;
+    background-color: rgb(160 171 160);
+    border: 0.1vw solid grey;
+    border-radius: 25px;
+    font-size: 1vw;
+    color: white;
+    font-weight: bold;
+    padding-left: 1vw;
+	padding-right: 1vw;	
+}
+
+/* Create angled background with 'before' pseudo-element */
+header::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: calc(var(--heading-height));
+	z-index: -1;
+	/* transform: skewY(-3.5deg); */
+	background: 
+		linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+		url(https://images.unsplash.com/photo-1495464101292-552d0b52fe41?auto=format&fit=crop&w=1350&q=80) no-repeat center,
+		linear-gradient(#4e4376, #2b5876);
+	background-size: cover;
+	border-bottom: .2em solid #fff;
+}
+
+header .home{
+	width: 3vw;
+	height: 3vw;
+	background-image: url(../img/home.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+
+h1 {
+	font-size: calc(2.8em + 2.6vw);
+	font-weight: 700;
+	letter-spacing: .01em;
+	padding: 10rem 0 0 4.5rem;
+	text-shadow: .022em .022em .022em #111;
+	color: #fff;
+}
+
+a, a:focus{
+	text-decoration: none;
+	outline: none;
+	color: inherit;
+}
+
+.wrap{
+	width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 15vw; */
+}
+
+
+main {
+	padding: calc(var(--heading-height) + 1vw) 4em 0;
+	text-align: center;
+}
+
+.predict_button{
+	margin: 5% auto;
+	padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    width: 16vw;
+    text-align: center;
+    background-color: rgb(160 171 160);
+    border: 0.1vw solid grey;
+    border-radius: 25px;
+    font-size: 1.5vw;
+    color: white;
+    font-weight: bold;
+    margin: auto;
+}
+
+
+.upload_file{
+	padding: 1.5vw;
+	text-align: center;
+	background-color: rgb(39, 121, 39);
+	border: 0.1vw solid grey;
+	font-size: 1.5vw;
+	color: white;
+	font-weight: bold;
+}
+.predict_button:disabled, .upload_file:disabled{
+	display: none;
+}
+
+.input-block{
+	position: relative;
+	text-align: center;
+	height: fit-content;
+	margin: auto;
+}
+.input-block>.predict_input{
+	position: absolute;
+	z-index: 0;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.predictions{
+	padding: 1vw 2vw;
+    background: white;
+    border: 0.1vw solid gray;
+    font-size: 1.5vw;
+    width: 12vw;
+    margin: auto;
+	resize: vertical;
+	max-height: 20vw;
+	margin-top: 2vw;
+}
+
+.input-block .login{
+	display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between;
+}
+
+form>input, form>input:focus {
+    margin-bottom: 3vw;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+}
+
+form{
+	display: flex;
+    flex-direction: column;
+    text-align: left;
+	height: 15vw;
+    border-radius: 20px;
+}
+
+form.login{
+	padding: 5vw;
+    background: white;
+}
+
+label{
+	font-size: 15px;
+}
+
+button{
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;    
+    text-align: center;
+    background-color: rgb(160 171 160);
+    border: 0.1vw solid grey;
+    border-radius: 25px;
+    font-size: 1vw;
+    color: white;
+    font-weight: bold;
+}

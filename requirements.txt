@@ -1,0 +1,16 @@
+fastapi
+pydantic
+uvicorn
+xlrd==1.2.0
+jinja2
+aiofiles
+starlette
+ormar
+psycopg2-binary
+asyncpg
+pandas
+python-multipart
+autogluon
+python-jose[cryptography]
+passlib[bcrypt]
+python-dotenv
